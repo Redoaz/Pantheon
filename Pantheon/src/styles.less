@@ -1,1 +1,101 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Fonts */
+@font-face {
+    font-family: 'Laira Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Laira Regular'), url('./assets/Laira-rgoBL.woff') format('woff');
+}
+    
+
+@font-face {
+    font-family: 'Laira Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Laira Italic'), url('./assets/LairaItalic-MVo6n.woff') format('woff');
+}
+
+/* Variables */
+:root {
+    --corner-radius: 4px;
+    --mainbgcolor:whitesmoke;
+    --mainpadding: 4px 12px;
+}
+
+
+
+/* Schemes */
+
+
+/* Basics */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    display: grid;
+    place-items: center;
+    font-family: inter;
+}
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+ul, li {
+    list-style: none;
+}
+.stripe-shadow {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.stripe-long-shadow {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.material-shadow {
+    box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+}
+
+h1 {
+    font-family: Laira Regular;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+h2, h3, h4 {
+    font-family: inter;
+    text-align: center;
+}
+
+button {
+    padding: 4px 0px;
+    
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+.row {
+    flex-direction: row;
+}
+.justify-content-spbt {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+/** Mobile **/
