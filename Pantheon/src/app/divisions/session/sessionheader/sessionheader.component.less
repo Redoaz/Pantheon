@@ -1,26 +1,28 @@
 
 .sessionheader {
     background-color: #1E1E1E ;
-    width: 100%;
-    height: 80px;
 }
 .useravatarinfo {
     grid-template-columns: auto auto;
-    justify-content: start;
-    column-gap: 8px;
+    column-gap: 12px;
+    row-gap: 4px;
     padding: 10px 28px;
     background-color: white;
     border-radius: 0px 4px 4px 0px;
-    width: max-content;
-    height: 80px;
-
 }
 .useravatarinfo *:first-child {
     width: 55px;
     grid-area: 1 / 1 / span 2 / span 1;
 }
 .useravatarinfo *:not(:first-child) {
-    height: 8px;
+    font-size: 10px;
+}
+
+.useravatarinfo li:nth-child(2) {
+    align-self: end;
+}
+.useravatarinfo li:nth-child(3) {
+    align-self: self-start;
 }
 span {
     font-weight: bold;
@@ -42,6 +44,7 @@ span {
     border-radius: 4px;
     background-color: azure;
     position: relative;
+    cursor: pointer;
 }
 .sessionburger::after{
     content: '';
