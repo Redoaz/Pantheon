@@ -1,0 +1,55 @@
+
+.sessionheader {
+    background-color: #1E1E1E ;
+    width: 100%;
+    height: 80px;
+}
+.useravatarinfo {
+    grid-template-columns: auto auto;
+    justify-content: start;
+    column-gap: 8px;
+    padding: 10px 28px;
+    background-color: white;
+    border-radius: 0px 4px 4px 0px;
+    width: max-content;
+    height: 80px;
+
+}
+.useravatarinfo *:first-child {
+    width: 55px;
+    grid-area: 1 / 1 / span 2 / span 1;
+}
+.useravatarinfo *:not(:first-child) {
+    height: 8px;
+}
+span {
+    font-weight: bold;
+}
+.sessioncrumb {
+    margin-left: auto;
+    padding: 10px 28px 10px 0;
+    color: azure;
+}
+.sessioncrumb *:first-child {
+    margin-right: 8px;
+    font-size: 10px;
+    text-align: right;
+}
+
+.sessionburger, .sessionburger::after, .sessionburger::before {
+    width: 36px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: azure;
+    position: relative;
+}
+.sessionburger::after{
+    content: '';
+    position: absolute;
+    top: -10px;
+}
+.sessionburger::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+}
