@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { RouterLink } from '@angular/router';
+const title = "Deadpool"; 
 @Component({
   selector: 'app-landing',
   standalone: true,
@@ -10,5 +11,4 @@ import { RouterLink } from '@angular/router';
   styleUrl: './landing.component.less'
 })
 export class LandingComponent {
-
 }

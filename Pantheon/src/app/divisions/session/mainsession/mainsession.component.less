@@ -1,6 +1,7 @@
 .main-body {
     padding: 22px;
     text-align: left;
+    height: 100%;
 }
 
 h1, h2, h3, h4 {
@@ -12,7 +13,7 @@ h1, h2, h3, h4 {
     width: 100%;
 }
 
-.main-services > li {
+.main-services li {
     width: 100px;
     height: 32px;
     display: grid;
@@ -42,13 +43,20 @@ h1, h2, h3, h4 {
     background-color: green;
 }
 
-.session-dashboard {
+.main-route {
+    background-color: purple;
+    color: white;
+}
+.session-dashboard, .session-recents {
     width: 100%;
-    height: 100%;
     background-color: rgb(239, 239, 239);
     margin-top: 22px;
     padding: 8px;
     border-radius: 4px;
+}
+
+.session-recents {
+    flex:1;
 }
 
 .plot {
@@ -57,4 +65,22 @@ h1, h2, h3, h4 {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     height: 120px;
     border-radius: 4px;
+}
+
+.recent-sheetlist {
+    margin-top: 22px;
+    border-radius: 4px;
+}
+.recent-sheetlist li {
+    width: 100%;
+    height: 22px;
+    padding-left: 4px;
+    padding-top: 2px;
+
+}
+.recent-sheetlist li:nth-child(odd) {
+    background-color: whitesmoke;
+}
+.recent-sheetlist li:nth-child(even) {
+    background-color: rgb(230, 228, 228);
 }

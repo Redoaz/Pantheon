@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { LegalComponent } from './landing/legal/legal.component';
 import { LandingComponent } from './landing/landing.component';
+import { MainSetterComponent } from './divisions/setter/main-setter/main-setter.component';
 
 export const routes: Routes = [
     {
@@ -12,6 +13,13 @@ export const routes: Routes = [
     },
     {
         path: 'legal', component: LegalComponent
+    },
+    {
+        path: 'setter', component: MainSetterComponent,
+        loadChildren: () => import('./divisions/setter/setter-route').then(mod => mod.setterroute)
+    },
+    {
+        path: 'landing', component: LandingComponent
     },
     {
         path: '**', component: LandingComponent
