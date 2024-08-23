@@ -1,17 +1,19 @@
 import { Routes } from '@angular/router';
-import { SessionComponent } from './session.component';
 import { MainSetterComponent } from '../setter/main-setter/main-setter.component';
 import { MainsessionComponent } from './mainsession/mainsession.component';
 
 export const sessionroute: Routes = [
   {
-    path: '', component: SessionComponent
+    path: '', outlet:"user-session",
+    component: MainsessionComponent,
   },
   {
-    path: 'main', component: MainsessionComponent
+    path: 'setter', outlet:"user-session",
+    component: MainSetterComponent
   },
   {
-    path: 'setter', component: MainSetterComponent
-  }
+    path: 'inventory', outlet:"user-session",
+    component: MainsessionComponent
+  },
 ];
 
