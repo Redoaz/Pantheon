@@ -1,7 +1,7 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { MainsessionComponent } from './mainsession/mainsession.component';
 import { SessionheaderComponent } from './sessionheader/sessionheader.component';
-import { RouterOutlet, Router } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-session',
@@ -10,14 +10,8 @@ import { RouterOutlet, Router } from '@angular/router';
   templateUrl: './session.component.html',
   styleUrl: './session.component.less'
 })
-export class SessionComponent implements AfterViewInit {
+export class SessionComponent {
+  parentExample: string ="division";
   
-  @ViewChild(MainsessionComponent) childReference;
-  
-  exampleParent!: String;
-
-  ngAfterViewInit(): void {
-    this.exampleParent = this.childReference.exampleChild;
-  }
   
 }
