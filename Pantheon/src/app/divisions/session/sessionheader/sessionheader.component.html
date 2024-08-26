@@ -1,9 +1,12 @@
-<div class="sessionheader {{ childExample }}" >
+<div class="sessionheader {{ message }}">
     <div class="header-container flex row material-shadow">
         <ul class="useravatarinfo grid">
             <li><img src="../../../../assets/useravatar.png" alt=""></li>
             <li>Nombre Apellido</li>
-            <li><span>{{ usersession }}</span></li>
+            <li><div *ngIf="message == 'black'"><span>Principal</span></div>
+                <div *ngIf="message == 'blue'"><span>Ventas</span></div>
+                <div *ngIf="message == 'orange'"><span>Catalogo</span></div>
+            </li>
         </ul>
         <ul class="sessioncrumb flex row align-items-center">
             <li>01-01-2024 <br> 12:00:00</li>

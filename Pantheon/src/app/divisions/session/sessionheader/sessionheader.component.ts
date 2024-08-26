@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SessionService } from '../session.service';
 
 @Component({
   selector: 'app-sessionheader',
@@ -8,9 +9,15 @@ import { Component, Input } from '@angular/core';
   templateUrl: './sessionheader.component.html',
   styleUrl: './sessionheader.component.less'
 })
-export class SessionheaderComponent {
-  usersession = 'division';
+export class SessionheaderComponent implements OnInit {
 
-  @Input() childExample!: String;
+  message:string = 'beep';
+
+  constructor(private data: SessionService){  }
+
+  ngOnInit() {
+    this.data.currentMessage.subscribe(message => this.message = message)
+  
+  }
 
 }
