@@ -1,7 +1,7 @@
 <div class="sessionheader {{ message }}">
     <div class="header-container flex row material-shadow">
         <ul class="useravatarinfo grid">
-            <li><img src="../../../../assets/useravatar.png" alt=""></li>
+            <li><a  (click)="goBack()"><img src="../../../../assets/useravatar.png" alt=""></a></li>
             <li>Nombre Apellido</li>
             <li><div *ngIf="message == 'black'"><span>Principal</span></div>
                 <div *ngIf="message == 'blue'"><span>Ventas</span></div>

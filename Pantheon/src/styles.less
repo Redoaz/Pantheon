@@ -24,21 +24,33 @@
     --darkgray:darkgray;
     --mainpadding: 4px 12px;
     --black: #1E1E1E;
-    --blue: blue;
-    --orange: CD5600;
+    --blue: #1d4d9c;
+    --orange: #ef7110;
+    --yellow: #F6BE00;
+    --green: #036757;
+    --lightblue:#e23030;
 }
 
 
 
 /* Schemes */
 .black{
-    background-color: #1E1E1E ;
+    background-color: var(--black) ;
 }
 .blue {
-    background-color: blue;
+    background-color: var(--blue);
 }
 .orange {
-    background-color: orange;
+    background-color: var(--orange);
+}
+.yellow {
+    background-color: var(--yellow);
+}
+.green {
+    background-color: var(--green);
+}
+.lightblue {
+    background-color: var(--lightblue);
 }
 
 /* Basics */
@@ -144,10 +156,50 @@ main {
     display: flex;
     flex-direction: column;
 }
+main > *:nth-child(3) {
+    height: 100%;
+}
 .main-body {
     padding: 22px;
     text-align: left;
     height: 100%;
 }
 
+/** Module Templates **/
+.module-services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.main-module-side {
+    width: 100%;
+    margin-right: 8px;
+}
+
+.module-crumb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-crumbs {
+    width: 200px;
+    height: 20px;
+    background-color: lightslategray;
+    border-radius: var(--corner-radius);
+}
+
+.module-sidebar {
+    width: 180px;
+    height: 100%;
+    background-color: red;
+}
+
+.module-sidebar h4 {
+    text-align: left;
+}
 /** Mobile **/
